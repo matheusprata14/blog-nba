@@ -1,0 +1,257 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f6a830;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+.inicio {
+    margin-top: 30px;
+}
+
+/* HEADER */
+.header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between; /* separa esquerda e direita */
+    padding: 0 20px;
+    height: 70px;
+    background-color: #9b042c;
+}
+
+/* LOGO */
+.logo {
+    height: 50px;
+}
+
+/* TÍTULO CENTRAL */
+.header h1 {
+    color: white;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+/* MENU */
+.menu {
+    display: flex;
+    gap: 20px;
+}
+
+/* LINKS */
+.menu a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+.menu a:hover {
+    color: #f6a830; /* dourado Lakers */
+}
+
+.sub{
+    display: flex;
+    justify-content: center;
+    color: white;
+    background-color: #9b042c;
+    padding: 60px 20px;
+}
+
+.sub h2{
+margin-top: 10px;
+}
+
+.p1{
+    display: flex;
+    justify-content: center;
+    color: white;
+    background-color: #9b042c;
+    height: 10vh;
+    align-items: center;
+    padding: 90px 20px;
+}
+
+.p1 p {
+    max-width: 800px;
+    text-align: center;
+    line-height: 1.6;
+    font-size: 18px;
+    letter-spacing: 0.5px;
+}
+
+/* SEÇÃO JOGADORES */
+.jogadores {
+    background-color: #9b042c;
+    padding: 40px 20px;
+    margin-top: 30px;
+}
+
+/* TÍTULO */
+.jogadores h2 {
+    color: white;
+    text-align: center;
+    font-size: 36px;
+}
+
+/* CONTAINER DOS CARDS */
+.cards-container {
+    display: flex;
+    justify-content: center;
+    gap: 25px;
+    flex-wrap: wrap;
+    margin-top: 30px;
+}
+
+/* CARD */
+.card {
+    background-color: #1a1a1a;
+    width: 220px;
+    padding: 20px;
+    border-radius: 15px;
+    text-align: center;
+    color: white;
+    transition: 0.3s;
+}
+
+
+
+/* HOVER (efeito bonito) */
+.card:hover {
+    transform: scale(1.05);
+}
+
+/* IMAGEM */
+.card img {
+    width: 100px;
+    margin-bottom: 10px;
+    aspect-ratio: 16/20;
+    
+}
+
+/* NOME */
+.card h3 {
+    font-size: 20px;
+    margin-bottom: 5px;
+}
+
+/* POSIÇÃO */
+.posicao {
+    font-size: 14px;
+    opacity: 0.7;
+    display: block;
+    margin-bottom: 10px;
+}
+
+/* DESCRIÇÃO */
+.card p {
+    font-size: 15px;
+    line-height: 1.5;
+}
+
+/* Trofeus*/
+
+.trofeus {
+    background-color: #9b042c;
+    color: white;
+    padding: 60px 20px;
+    text-align: center;
+    margin-top: 30px;
+}
+
+.trofeus h2 {
+    font-size: 36px;
+    margin-bottom: 30px;
+}
+
+.trofeus-container {
+    display: flex;
+    justify-content: center;
+    gap: 40px;
+    flex-wrap: wrap;
+
+}
+
+.trofeu-box {
+    background-color: black;
+    padding: 30px;
+    border-radius: 15px;
+    width: 200px;
+}
+
+.numero {
+    font-size: 40px;
+    font-weight: bold;
+    color: #9b042c; /* dourado */
+}
+
+.trofeu-box p {
+    margin-top: 10px;
+    font-size: 16px;
+}
+
+.produt{
+    background-color: #9b042c;
+    margin-top: 30px;
+    text-align: center;
+    height: 60vh;
+}
+
+.produt h2{
+    color: white;
+     font-size: 36px;
+    margin-bottom: 30px ;
+}
+
+
+.produtos-container {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    flex-wrap: wrap;
+    margin-top: 30px;
+}
+
+.produto {
+    background-color: #1a1a1a;
+    padding: 20px;
+    border-radius: 15px;
+    width: 200px;
+    text-align: center;
+    color: white;
+    transition: 0.3s;
+}
+
+.produto:hover {
+    transform: scale(1.05);
+}
+
+.produto img {
+    width: 100px;
+    margin-bottom: 10px;
+}
+
+.btn {
+    display: inline-block;
+    margin-top: 10px;
+    padding: 10px;
+    background-color: #f6a830;
+    color: black;
+    text-decoration: none;
+    border-radius: 10px;
+    font-weight: bold;
+}
+
+.btn:hover {
+    background-color: #9b042c;
+    color: #070404;
+    transition: 0.6;
+}

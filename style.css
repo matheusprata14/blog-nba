@@ -1,0 +1,157 @@
+/* RESET */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* BODY */
+body {
+    font-family: Arial, sans-serif;
+    background-color: black;
+}
+
+/* HEADER */
+header {
+    display: flex;
+    align-items: center;
+    padding: 0 20px;
+    height: 70px;
+    background-color: blue;
+}
+
+
+
+.logo {
+    height: 50px;
+}
+
+.titulo {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+}
+
+.titulo h1 {
+    color: white;
+}
+
+/* CONTAINER DOS CARDS */
+.cards {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 30px;
+    margin-top: 80px;
+}
+
+/* CARD PADRÃO */
+.card {
+    width: 200px;
+    height: 250px;
+    border-radius: 15px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+/* HOVER (efeito leve) */
+.card:hover {
+    transform: scale(1.05);
+}
+
+/* IMAGEM */
+.card img {
+    height: 80px;
+}
+
+/* TEXTO */
+.card p {
+    color: white;
+    font-weight: bold;
+    margin-top: 10px;
+}
+
+/* BOTÃO */
+.card button {
+    margin-top: 10px;
+    border: none;
+}
+
+.card a {
+    text-decoration: none;
+    margin-top: 10px;
+    padding: 10px 15px;
+    background-color: black;
+    border-radius: 10px;
+    font-weight: bold;
+    display: inline-block;
+    transition: 0.3s;
+}
+
+/* CORES DOS TIMES */
+
+/* Lakers */
+.lakers {
+    background-color: #552583;
+}
+.lakers a {
+    color: #552583;
+    box-shadow: white 3px 3px 3px;
+}
+.lakers a:hover {
+    background-color: #fdb927;
+}
+
+/* Warriors */
+.warriors {
+    background-color: #04339b;
+}
+.warriors a {
+    color: #1d428a;
+    box-shadow: white 3px 3px 3px;
+}
+.warriors a:hover {
+    background-color: #ffc72c;
+}
+
+/* Bulls */
+.bulls {
+    background-color: #c30423;
+}
+.bulls a {
+    color: #ce1141;
+    box-shadow: white 3px 3px 3px;
+}
+.bulls a:hover {
+    background-color: #d7c8ca;
+}
+
+/* Celtics */
+.celtics {
+    background-color: #06823c;
+}
+.celtics a {
+    color: #06823c;
+    box-shadow: white 3px 3px 3px;
+}
+
+.celtics a:hover {
+    background-color: #c09973;
+}
+
+/* Heat */
+.heat {
+    background-color: #9b042c
+}
+.heat a {
+    color: #9b042c;    
+    box-shadow: white 3px 3px 3px;
+}
+.heat a:hover {
+    background-color: #f6a830;
+}

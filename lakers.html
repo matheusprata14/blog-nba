@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="lakers.css">
+</head>
+<body>
+
+<header class="header">
+
+    <div class="logo-container">
+        <img src="lakerslogo.png" alt="Lakers Logo" class="logo">
+    </div>
+
+    <h1>Los Angeles Lakers</h1>
+
+    <nav class="menu">
+        <a href="index.html">Início</a>
+        <a href="#jogadores">Jogadores</a>
+        <a href="#trofeus">Conquistas</a>
+        <a href="#produtos">Produtos</a>
+    </nav>
+
+</header>
+
+<div class="inicio" id="inicio">
+
+<div class="sub">
+    <h2> Los Angeles Lakers – Uma das maiores dinastias da NBA </h2>
+</div>
+
+<div class="p1">
+    <p> O Los Angeles Lakers é uma das franquias mais icônicas da NBA, fundado em 1947. 
+Ao longo das décadas, o time construiu uma história marcada por títulos, grandes rivalidades e jogadores lendários. 
+Com 17 campeonatos da NBA, os Lakers se destacam como uma das equipes mais vitoriosas do basquete mundial. 
+Ídolos como Magic Johnson, Kobe Bryant e LeBron James ajudaram a consolidar o legado da equipe, tornando-a referência dentro e fora das quadras. </p>
+</div>
+
+
+<div class="jogadores" id="jogadores">
+
+    <h2>Lendas dos Lakers</h2>
+
+    <div class="cards-container">
+
+        <!-- Kobe -->
+        <div class="card">
+            <img src="kobe.png" alt="Kobe Bryant">
+            <h3>Kobe Bryant</h3>
+            <span class="posicao">Ala-armador (SG)</span>
+            <p>
+                Ídolo dos Lakers, 5x campeão da NBA e símbolo da "Mamba Mentality".
+            </p>
+        </div>
+
+        <!-- Magic -->
+        <div class="card">
+            <img src="magic.png" alt="Magic Johnson">
+            <h3>Magic Johnson</h3>
+            <span class="posicao">Armador (PG)</span>
+            <p>
+                Um dos maiores armadores da história, líder do Showtime Lakers e 5x campeão da NBA.
+            </p>
+        </div>
+
+        <!-- LeBron -->
+        <div class="card">
+            <img src="lebron.png" alt="LeBron James">
+            <h3>LeBron James</h3>
+            <span class="posicao">Ala (SF)</span>
+            <p>
+                Um dos maiores da história, campeão pelos Lakers em 2020 e referência dentro e fora das quadras.
+            </p>
+        </div>
+
+    </div>
+
+</div>
+
+<div class="trofeus" id="trofeus">
+
+    <h2>Conquistas dos Lakers</h2>
+
+    <div class="trofeus-container">
+
+        <div class="trofeu-box">
+            <span class="numero" data-target="17">0</span>
+            <p>Títulos da NBA</p>
+        </div>
+
+        <div class="trofeu-box">
+            <span class="numero" data-target="32">0</span>
+            <p>Títulos de Conferência</p>
+        </div>
+
+        <div class="trofeu-box">
+            <span class="numero" data-target="25">0</span>
+            <p>Títulos de Divisão</p>
+        </div>
+
+    </div>
+
+</div>
+
+
+<section class="produt"  id="produtos">
+
+    <h2>Produtos dos Lakers </h2>
+
+    <div class="produtos-container">
+
+        <div class="produto">
+            <img src="camisala.png" alt="Camiseta Lakers">
+            <h3>Camiseta Lakers</h3>
+            <p>R$ 300,00</p>
+            <a href="#" class="btn">Comprar</a>
+        </div>
+
+        <div class="produto">
+            <img src="shortla.png" alt="Short Lakers">
+            <h3>Short Lakers</h3>
+            <p>R$ 250,00</p>
+            <a href="#" class="btn">Comprar</a>
+        </div>
+
+        <div class="produto">
+            <img src="bonela.png" alt="Boné Lakers">
+            <h3>Boné Lakers</h3>
+            <p>R$ 199,90</p>
+            <a href="#" class="btn">Comprar</a>
+        </div>
+
+    </div>
+
+</section>
+
+
+
+
+
+<script>
+const counters = document.querySelectorAll('.numero');
+
+counters.forEach(counter => {
+    counter.innerText = '0';
+
+    const updateCounter = () => {
+        const target = +counter.getAttribute('data-target');
+        const current = +counter.innerText;
+
+        const increment = target / 100;
+
+        if (current < target) {
+            counter.innerText = Math.ceil(current + increment);
+            setTimeout(updateCounter, 20);
+        } else {
+            counter.innerText = target;
+        }
+    };
+
+    updateCounter();
+});
+</script>
+
+</body>
+</html>

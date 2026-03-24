@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="heat.css">
+</head>
+<body>
+
+<header class="header">
+
+    <div class="logo-container">
+        <img src="heatlogo.png" alt="Heat Logo" class="logo">
+    </div>
+
+    <h1> Miami Heat  </h1>
+
+    <nav class="menu">
+        <a href="index.html">Início</a>
+        <a href="#jogadores">Jogadores</a>
+        <a href="#trofeus">Conquistas</a>
+        <a href="#produtos">Produtos</a>
+    </nav>
+
+</header>
+
+<div class="inicio" id="inicio">
+
+<div class="sub">
+    <h2> Miami Heat – Cultura vencedora e intensidade competitiva </h2>
+</div>
+
+<div class="p1">
+    <p>O Miami Heat é conhecido por sua cultura forte e mentalidade competitiva. Mesmo sendo uma franquia mais recente, já conquistou títulos importantes e revelou grandes estrelas.
+         </p>
+</div>
+
+
+<div class="jogadores" id="jogadores">
+
+    <h2>Lendas do Heat </h2>
+
+    <div class="cards-container">
+
+        <!-- Wade -->
+        <div class="card">
+            <img src="wade.png" alt="Dwyane Wade">
+            <h3>Dwyane Wade</h3>
+            <span class="posicao">Ala-armador (SG)</span>
+            <p> Maior ídolo da história do Heat, 3x campeão da NBA.   </p>
+        </div>
+
+        <!-- James -->
+        <div class="card">
+            <img src="lebronj.png" alt="LeBron James">
+            <h3>LeBron James</h3>
+            <span class="posicao">Ala (SF)</span>
+            <p>
+Levou o Heat a dois títulos e marcou uma era dominante na equipe.            </p>
+        </div>
+
+        <!-- bosh -->
+        <div class="card">
+            <img src="bosh.png" alt="Chris Bosh">
+            <h3> Chris Bosh </h3>
+            <span class="posicao"> Ala-pivô (PF) </span>
+            <p>
+                Peça fundamental do “Big Three”, Chris Bosh foi essencial nos títulos do Miami Heat, contribuindo com sua versatilidade, defesa e inteligência dentro de quadra.
+            </p>
+        </div>
+
+    </div>
+
+</div>
+
+<div class="trofeus" id="trofeus">
+
+    <h2>Conquistas do Heat </h2>
+
+    <div class="trofeus-container">
+
+        <div class="trofeu-box">
+            <span class="numero" data-target="3">0</span>
+            <p>Títulos da NBA</p>
+        </div>
+
+        <div class="trofeu-box">
+            <span class="numero" data-target="7">0</span>
+            <p>Títulos de Conferência</p>
+        </div>
+
+        <div class="trofeu-box">
+            <span class="numero" data-target="16">0</span>
+            <p>Títulos de Divisão</p>
+        </div>
+
+    </div>
+
+</div>
+
+
+<section class="produt"  id="produtos">
+
+    <h2>Produtos do Heat</h2>
+
+    <div class="produtos-container">
+
+        <div class="produto">
+            <img src="camisaheat.jpg" alt="Camiseta Heat">
+            <h3>Camiseta Heat</h3>
+            <p>R$ 300,00</p>
+            <a href="#" class="btn">Comprar</a>
+        </div>
+
+        <div class="produto">
+            <img src="shortheat.jpg" alt="Short Heat">
+            <h3>Short Heat</h3>
+            <p>R$ 250,00</p>
+            <a href="#" class="btn">Comprar</a>
+        </div>
+
+        <div class="produto">
+            <img src="boneheat.jpg" alt="Boné Heat">
+            <h3>Boné Heat</h3>
+            <p>R$ 199,90</p>
+            <a href="#" class="btn">Comprar</a>
+        </div>
+
+    </div>
+
+</section>
+
+
+
+
+
+<script>
+const counters = document.querySelectorAll('.numero');
+
+counters.forEach(counter => {
+    counter.innerText = '0';
+
+    const updateCounter = () => {
+        const target = +counter.getAttribute('data-target');
+        const current = +counter.innerText;
+
+        const increment = target / 100;
+
+        if (current < target) {
+            counter.innerText = Math.ceil(current + increment);
+            setTimeout(updateCounter, 20);
+        } else {
+            counter.innerText = target;
+        }
+    };
+
+    updateCounter();
+});
+</script>
+
+</body>
+</html>

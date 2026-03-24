@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="bulls.css">
+</head>
+<body>
+
+<header class="header">
+
+    <div class="logo-container">
+        <img src="bullslogo.png" alt="Bulls Logo" class="logo">
+    </div>
+
+    <h1> Chicago Bulls  </h1>
+
+    <nav class="menu">
+        <a href="index.html">Início</a>
+        <a href="#jogadores">Jogadores</a>
+        <a href="#trofeus">Conquistas</a>
+        <a href="#produtos">Produtos</a>
+    </nav>
+
+</header>
+
+<div class="inicio" id="inicio">
+
+<div class="sub">
+    <h2> Chicago Bulls – A era dominante de Michael Jordan </h2>
+</div>
+
+<div class="p1">
+    <p> O Chicago Bulls é uma das franquias mais icônicas da NBA, principalmente por sua dominância nos anos 90. Liderados por Michael Jordan, o time conquistou seis títulos e marcou uma era no basquete mundial, tornando-se referência de excelência e competitividade.
+         </p>
+</div>
+
+
+<div class="jogadores" id="jogadores">
+
+    <h2>Lendas do Bulls </h2>
+
+    <div class="cards-container">
+
+        <!-- Jordan -->
+        <div class="card">
+            <img src="jordan.png" alt="Michael Jordan">
+            <h3>Michael Jordan</h3>
+            <span class="posicao">Ala-armador (SG)</span>
+            <p>
+                Maior jogador da história para muitos, 6x campeão da NBA e símbolo absoluto dos Bulls.
+            </p>
+        </div>
+
+        <!-- Pippen -->
+        <div class="card">
+            <img src="pippen.png" alt="Scottie Pippen">
+            <h3>Scottie Pippen</h3>
+            <span class="posicao">Ala (SF)</span>
+            <p>
+                Braço direito de Jordan, essencial nos títulos e conhecido pela defesa e versatilidade.
+            </p>
+        </div>
+
+        <!-- Rose -->
+        <div class="card">
+            <img src="rose.png" alt="Derrick Rose">
+            <h3> Derrick Rose </h3>
+            <span class="posicao"> Armador (PG)</span>
+            <p>
+                MVP mais jovem da história da NBA, marcou uma geração mesmo com lesões.
+            </p>
+        </div>
+
+    </div>
+
+</div>
+
+<div class="trofeus" id="trofeus">
+
+    <h2>Conquistas do Bulls</h2>
+
+    <div class="trofeus-container">
+
+        <div class="trofeu-box">
+            <span class="numero" data-target="6">0</span>
+            <p>Títulos da NBA</p>
+        </div>
+
+        <div class="trofeu-box">
+            <span class="numero" data-target="6">0</span>
+            <p>Títulos de Conferência</p>
+        </div>
+
+        <div class="trofeu-box">
+            <span class="numero" data-target="9">0</span>
+            <p>Títulos de Divisão</p>
+        </div>
+
+    </div>
+
+</div>
+
+
+<section class="produt"  id="produtos">
+
+    <h2>Produtos do Bulls</h2>
+
+    <div class="produtos-container">
+
+        <div class="produto">
+            <img src="camisetabulls.png" alt="Camiseta Bulls">
+            <h3>Camiseta Bulls</h3>
+            <p>R$ 300,00</p>
+            <a href="#" class="btn">Comprar</a>
+        </div>
+
+        <div class="produto">
+            <img src="shortbulls.png" alt="Short Bulls">
+            <h3>Short Bulls</h3>
+            <p>R$ 250,00</p>
+            <a href="#" class="btn">Comprar</a>
+        </div>
+
+        <div class="produto">
+            <img src="bonebulls.png" alt="Boné Bulls">
+            <h3>Boné Bulls</h3>
+            <p>R$ 199,90</p>
+            <a href="#" class="btn">Comprar</a>
+        </div>
+
+    </div>
+
+</section>
+
+
+
+
+
+<script>
+const counters = document.querySelectorAll('.numero');
+
+counters.forEach(counter => {
+    counter.innerText = '0';
+
+    const updateCounter = () => {
+        const target = +counter.getAttribute('data-target');
+        const current = +counter.innerText;
+
+        const increment = target / 100;
+
+        if (current < target) {
+            counter.innerText = Math.ceil(current + increment);
+            setTimeout(updateCounter, 20);
+        } else {
+            counter.innerText = target;
+        }
+    };
+
+    updateCounter();
+});
+</script>
+
+</body>
+</html>
